@@ -17,10 +17,14 @@ class Game:
         self.setup()
 
     def setup(self):
-            # Load the map using pytmx
         tmx_data = load_pygame('../data/maps/world.tmx')
+
         for x, y, image in tmx_data.get_layer_by_name('Main').tiles():
-            Sprite((x * TILE_SIZE,y * TILE_SIZE), image, self.all_sprites, self.collision_sprites)
+            Sprite((x * TILE_SIZE,y * TILE_SIZE), image, (self.all_sprites, self.collision_sprites))
+
+        for x, y, image in tmx_data.get_layer_by_name('Decoration').tiles():
+            Sprite((x * TILE_SIZE,y * TILE_SIZE), image, self.all_sprites)
+
 
     def run(self):
         while self.running:
