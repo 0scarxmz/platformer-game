@@ -1,10 +1,11 @@
 from settings import * 
+from sprites import *
 
 class Game:
     def __init__(self):
         pygame.init()
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-        pygame.display.set_caption('Platformer')
+        pygame.display.set_caption('Jumping Game')
         self.clock = pygame.time.Clock()
         self.running = True
 
@@ -12,6 +13,14 @@ class Game:
         self.all_sprites = pygame.sprite.Group()
         self.collision_sprites = pygame.sprite.Group()
 
+        # load map
+        self.setup()
+
+    def setup(self):
+            # Load the map using pytmx
+        tmx_data = load_pygame('../data/maps/world.tmx')
+        for x, y, image in tmx_data.get_layer_by_name('Main').tiles():
+            Sprite((x * TILE_SIZE,y * TILE_SIZE), image, self.all_sprites, self.collision_sprites)
 
     def run(self):
         while self.running:
