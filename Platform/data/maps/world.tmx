@@ -61,7 +61,7 @@
 </data>
  </layer>
  <objectgroup id="2" name="Entities">
-  <object id="1" name="Player" x="683.636" y="220">
+  <object id="1" name="Player" x="410.909" y="310.909">
    <point/>
   </object>
   <object id="3" name="Worm" x="2240" y="320" width="576" height="64"/>

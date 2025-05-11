@@ -1,5 +1,8 @@
 from settings import * 
 from sprites import *
+from support import *
+from timer import Timer
+from groups import *
 
 class Game:
     def __init__(self):
@@ -10,11 +13,18 @@ class Game:
         self.running = True
 
         # groups 
-        self.all_sprites = pygame.sprite.Group()
+        self.all_sprites = AllSprites()
         self.collision_sprites = pygame.sprite.Group()
 
         # load map
+        self.load_assests()
         self.setup()
+
+        # timers
+
+    def load_assests(self):
+        # graphics
+        self.player_frames = import_folder('../Platform/images/player')
 
     def setup(self):
         tmx_data = load_pygame('../data/maps/world.tmx')
@@ -25,6 +35,9 @@ class Game:
         for x, y, image in tmx_data.get_layer_by_name('Decoration').tiles():
             Sprite((x * TILE_SIZE,y * TILE_SIZE), image, self.all_sprites)
 
+        for obj in tmx_data.get_layer_by_name('Entities'):
+            if obj.name == 'Player':
+                self.player = Player((obj.x, obj.y), self.all_sprites, self.collision_sprites, self.player_frames)
 
     def run(self):
         while self.running:
