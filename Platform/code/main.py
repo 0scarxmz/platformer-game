@@ -24,7 +24,7 @@ class Game:
 
     def load_assests(self):
         # graphics
-        self.player_frames = import_folder('../Platform/images/player')
+        self.player_frames = import_folder('../images/player')
 
     def setup(self):
         tmx_data = load_pygame('../data/maps/world.tmx')

@@ -21,6 +21,9 @@ class AnimatedSprite(Sprite):
 class Player(AnimatedSprite):
     def __init__(self, pos, groups, collision_sprites, frames):
         super().__init__(frames, pos, groups)
+        self.flip = False
+
+        # movement & collision
         self.direction = pygame.Vector2()
         self.collision_sprites = collision_sprites
         self.speed = 400
@@ -54,8 +57,8 @@ class Player(AnimatedSprite):
                     if self.direction.y < 0: self.rect.top = sprite.rect.bottom
                     self.direction.y = 0
 
-    def check_on_floor(self):
-        bottom_rect = pygame.FRect((0,0), (self.rect.width, 2).move_to(midtop = self.rect.midbottom))
+    def check_floor(self):
+        bottom_rect = pygame.FRect((0,0), (self.rect.width, 2)).move_to(midtop = self.rect.midbottom)
         self.on_floor = True if bottom_rect.collidelist([sprite.rect for sprite in self.collision_sprites]) >= 0 else False
 
     def animate(self, dt):
@@ -71,7 +74,7 @@ class Player(AnimatedSprite):
         self.image = pygame.transform.flip(self.image, self.flip, False)
 
     def update(self, dt):
-        self.check_on_floor()
+        self.check_floor()
         self.input()
         self.move(dt)
         self.animate(dt)
