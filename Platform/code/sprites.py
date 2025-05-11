@@ -9,13 +9,6 @@ class Sprite(pygame.sprite.Sprite):
         self.image = surf
         self.rect = self.image.get_frect(topleft=pos)
 
-    def update(self, dt):
-        # Update logic for the sprite
-        pass
-
-    def draw(self, surface):
-        surface.blit(self.image, self.rect.topleft)  # Draw the sprite on the surface
-
 class AnimatedSprite(Sprite):
     def __init__(self, frames, pos, groups):
         self.frames, self.frame_index, self.animation_speed = frames, 0, 10
