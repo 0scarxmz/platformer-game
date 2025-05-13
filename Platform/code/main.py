@@ -52,7 +52,7 @@ class Game:
 
             # draw 
             self.display_surface.fill(BG_COLOR)
-            self.all_sprites.draw(self.display_surface)
+            self.all_sprites.draw(self.player.rect.center)
             pygame.display.update()
         
         pygame.quit()
