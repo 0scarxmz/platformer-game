@@ -26,15 +26,15 @@ class Player(AnimatedSprite):
         # movement & collision
         self.direction = pygame.Vector2()
         self.collision_sprites = collision_sprites
-        self.speed = 400
-        self.gravity = 50
+        self.speed = 200
+        self.gravity = 25
         self.on_floor = False
 
     def input(self):
         keys = pygame.key.get_pressed()
         self.direction.x = int(keys[pygame.K_d]) - int(keys[pygame.K_a])
         if keys[pygame.K_SPACE] and self.on_floor:
-            self.direction.y = - 20
+            self.direction.y = - 10
 
     def move(self, dt):
         # Horizontal movement
