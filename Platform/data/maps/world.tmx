@@ -26,42 +26,36 @@
 </data>
  </layer>
  <objectgroup id="3" name="Entities">
-  <object id="1" name="snake" x="95" y="448" width="836" height="33"/>
-  <object id="2" name="snake" x="332" y="448" width="600" height="31"/>
-  <object id="3" name="snake" x="493" y="450" width="439" height="31"/>
-  <object id="5" name="snake" x="34" y="576" width="957" height="31"/>
-  <object id="6" name="snake" x="1055" y="543" width="95" height="31"/>
-  <object id="7" name="snake" x="1186" y="481" width="92" height="31"/>
-  <object id="8" name="snake" x="1282" y="418" width="91" height="31"/>
-  <object id="25" name="snake" x="4643.33" y="448.667" width="91" height="31"/>
-  <object id="26" name="snake" x="4768.67" y="352" width="91" height="31"/>
-  <object id="27" name="snake" x="4932" y="417.333" width="91" height="31"/>
-  <object id="28" name="snake" x="5025.33" y="320" width="91" height="31"/>
-  <object id="29" name="snake" x="5796" y="576.667" width="54" height="31"/>
-  <object id="30" name="snake" x="5957" y="544.333" width="54" height="31"/>
-  <object id="31" name="snake" x="6116" y="511.667" width="54" height="31"/>
-  <object id="32" name="snake" x="6277" y="481.333" width="54" height="31"/>
-  <object id="33" name="snake" x="6436" y="449" width="54" height="31"/>
-  <object id="34" name="snake" x="6749.33" y="545" width="98.6667" height="31"/>
-  <object id="35" name="snake" x="6978.33" y="514" width="29.6667" height="31"/>
-  <object id="36" name="snake" x="7010.33" y="416" width="29.6667" height="31"/>
-  <object id="37" name="snake" x="7076.33" y="323" width="29.6667" height="31"/>
-  <object id="38" name="snake" x="7136.33" y="255" width="29.6667" height="31"/>
-  <object id="9" name="snake" x="1375" y="354" width="95" height="31"/>
-  <object id="10" name="snake" x="1217" y="255" width="92" height="31"/>
-  <object id="11" name="snake" x="1410" y="191" width="93" height="31"/>
-  <object id="12" name="snake" x="1568.67" y="159" width="321" height="31"/>
-  <object id="13" name="snake" x="1571.33" y="160.333" width="413" height="31"/>
-  <object id="14" name="snake" x="1570" y="160.333" width="511.667" height="31"/>
-  <object id="16" name="snake" x="2178" y="512.333" width="253.667" height="31"/>
-  <object id="17" name="snake" x="2272" y="288.333" width="321.667" height="31"/>
-  <object id="21" name="snake" x="2943" y="575.333" width="288.667" height="31"/>
-  <object id="22" name="snake" x="4034" y="574.333" width="319.667" height="31"/>
-  <object id="23" name="snake" x="4358.33" y="500" width="54.6667" height="31"/>
-  <object id="24" name="snake" x="4485" y="466" width="54.6667" height="31"/>
-  <object id="18" name="snake" x="2310" y="161.333" width="214.667" height="31"/>
-  <object id="15" name="snake" x="1570" y="159" width="605" height="31"/>
-  <object id="4" name="snake" x="640" y="449" width="292" height="31"/>
+  <object id="1" name="snake" x="92.9406" y="433.297" width="832.098" height="47.4118"/>
+  <object id="2" name="snake" x="240.443" y="433.297" width="685.032" height="48.3696"/>
+  <object id="3" name="snake" x="471.755" y="436.171" width="453.72" height="44.5383"/>
+  <object id="5" name="snake" x="34" y="561.333" width="957" height="45.6667"/>
+  <object id="6" name="snake" x="1062" y="535.667" width="81.6667" height="38.3333"/>
+  <object id="7" name="snake" x="1190" y="471.667" width="83" height="40.3333"/>
+  <object id="8" name="snake" x="1287" y="405.333" width="83.3333" height="43.6667"/>
+  <object id="25" name="snake" x="4641.33" y="432" width="92.6667" height="47.6667"/>
+  <object id="26" name="snake" x="4771" y="336.667" width="89.3333" height="46.3333"/>
+  <object id="27" name="snake" x="4930" y="400.666" width="89.6667" height="47.6667"/>
+  <object id="28" name="snake" x="5027.66" y="305.333" width="89.6667" height="45.6667"/>
+  <object id="30" name="snake" x="5955.7" y="529" width="57.4545" height="46.3333"/>
+  <object id="31" name="snake" x="6115" y="498.455" width="60.1212" height="45.6667"/>
+  <object id="32" name="snake" x="6275" y="465.333" width="57.3333" height="47"/>
+  <object id="33" name="snake" x="6434.33" y="431" width="58.3333" height="49"/>
+  <object id="34" name="snake" x="6756.66" y="531" width="88" height="45"/>
+  <object id="35" name="snake" x="6913" y="512.333" width="32" height="32.6667"/>
+  <object id="36" name="snake" x="6976" y="416.333" width="33" height="32"/>
+  <object id="37" name="snake" x="7039.33" y="319" width="33" height="32.6667"/>
+  <object id="38" name="snake" x="7103.33" y="225" width="33.6667" height="32"/>
+  <object id="9" name="snake" x="1381" y="342.667" width="84.6667" height="42.3333"/>
+  <object id="10" name="snake" x="1222" y="245.667" width="83.3333" height="40.3333"/>
+  <object id="11" name="snake" x="1416" y="181.667" width="79.6667" height="40.3333"/>
+  <object id="12" name="snake" x="1566.66" y="151.023" width="607.209" height="37.7803"/>
+  <object id="16" name="snake" x="2178" y="497.666" width="250.667" height="45.6667"/>
+  <object id="17" name="snake" x="2280.67" y="276.333" width="309" height="43"/>
+  <object id="21" name="snake" x="2944" y="562" width="289.417" height="44.3333"/>
+  <object id="22" name="snake" x="4034" y="560.333" width="319.334" height="45"/>
+  <object id="18" name="snake" x="2304" y="148.333" width="220.667" height="44"/>
+  <object id="4" name="snake" x="682.953" y="434.734" width="245.522" height="44.5383"/>
   <object id="19" name="Player" x="48" y="124">
    <point/>
   </object>

@@ -15,6 +15,7 @@ class Game:
         # groups 
         self.all_sprites = AllSprites()
         self.collision_sprites = pygame.sprite.Group()
+        self.enemy_sprites = pygame.sprite.Group()
 
         # load map
         self.load_assests()
@@ -25,6 +26,7 @@ class Game:
     def load_assests(self):
         # graphics
         self.player_frames = import_folder('../images/player')
+        self.snake_frames = import_folder('../images/enemies/snake')
 
     def setup(self):
         tmx_data = load_pygame('../data/maps/world.tmx')
@@ -38,6 +40,23 @@ class Game:
         for obj in tmx_data.get_layer_by_name('Entities'):
             if obj.name == 'Player':
                 self.player = Player((obj.x, obj.y), self.all_sprites, self.collision_sprites, self.player_frames)
+            if obj.name == "snake":
+                Snake(self.snake_frames, pygame.FRect(obj.x, obj.y, obj.width, obj.height), (self.all_sprites, self.enemy_sprites))
+
+    def collision(self):
+        # player -> enemies
+        for enemy in self.enemy_sprites:
+            if pygame.sprite.collide_mask(self.player, enemy):
+                if self.player.direction.y > 0 and self.player.rect.bottom - enemy.rect.top < 60:
+                    # Stomp the enemy
+                    self.player.direction.y = -12  # Bounce up
+                    enemy.destroy()
+                else:
+                    # enemy -> player (hit from side or below)
+                    print("Player hit by enemy!")
+                    self.running = False
+
+
 
     def run(self):
         while self.running:
@@ -49,6 +68,7 @@ class Game:
             
             # update
             self.all_sprites.update(dt)
+            self.collision()
 
             # draw 
             self.display_surface.fill(BG_COLOR)
